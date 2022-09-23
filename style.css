@@ -1,0 +1,318 @@
+.container{
+    max-width:1200px;
+    height: 100%;
+    margin:auto;
+}
+body{
+    font-family: "poppins" , sans-serif;
+}
+:root{
+    --bg-color:#fff;
+    --text-color: #221314;
+    --second-color:#5a7184;
+    --main-color:#6e54fa;
+    --bg-font:6rem;
+    --h2-font:2rem;
+    --p-font:1.1rem;
+}
+#nav{ 
+    position: fixed; 
+    border:2px solid black transparent;
+    width:100%;
+    z-index: 1000;
+    background-color:#fff;
+    box-shadow: rgba(33, 35, 38, 0.856) 0px 10px 10px -10px;
+     
+}
+.nav-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    border:2px solid transparent;
+}
+.logo{
+    font-size: var(--h2-font);
+    font-weight: 600;
+    letter-spacing: 1px;
+    color:black;
+} 
+.nav-container .nav-items{
+    display:flex;
+}
+.nav-container .nav-items a{
+    padding:10px 24px;
+    border:2px solid transparent;
+    text-decoration: none;
+    font-size: var(--p-font);
+    color:black;
+    transition: ease .40s;
+    border-radius:6px;
+} 
+.nav-container .nav-items a:hover{
+    background:white;
+    transform: scale(1.2);
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 6px;
+    color:black;
+}
+.boat-container{
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    background: url("background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    display: flex;
+}
+.boat-contents{
+    position:relative;
+    top:200px;
+} 
+.boat-container h2{
+    font-size:var(--h2-font);
+    line-height: 1.2;
+    color:white;
+    font-family: "Poppins",sans-serif;
+    letter-spacing: 4px;
+    margin-bottom:30px;   
+}
+.boat-container p{
+    color:white;
+    font-size: var(--p-font);
+    font-weight: 400;
+    margin-bottom: 50px;
+     
+}
+.boat-container a{
+    display:inline-block;
+    font-size: var(--p-font);
+    background: #ffffffbf;
+    color: var(--main-color);
+    border-radius: 6px;
+    transition: ease .40s;
+    padding:15px 30px;
+    text-decoration: none;
+}
+.boat-container a:hover{
+    background: var(--bg-color);
+    transform: scale(1.2);
+}
+.icons-container{
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto)); */
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-gap: 2rem;
+    align-items: center;
+    text-align:center;
+    margin-top:5rem;
+     
+}
+.icons-container .vacations{
+    background-color: var(--bg-color);
+    border:1px solid #f0eded;
+    padding:50px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#icons{
+    padding:50px 0px 50px 0px;
+}
+#icons h2{
+    font-size: var(--h2-font);
+    line-height: 1.1;
+    text-align: center;
+}
+.vacations{
+    flex:1 1 250px;
+}
+.vacations-img img{
+   height: 85px;
+   width: 85px;
+   padding:15px;
+   background: var(--bg-color);
+   box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+   border-radius:6px;
+   margin-bottom:15px;
+   cursor: pointer;
+}
+.icons-container .vacations h3{
+   font-size: var(--h2-font);
+   font-weight: 600;
+   margin-bottom:8px;
+}
+.icons-container .vacations p{
+    font-size: var(--p-font);
+    color:var(--second-color);
+}
+.icons-container .vacations:hover{
+    box-shadow: 5px 30px 56.1276px rgb(55 55 55/ 12%);
+    border:1px solid transparent;
+    transform: translateY(-3px);
+    transition: ease .40s;
+}
+#destination{
+    margin:50px 0px 50px 0px;
+
+}
+.destination-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+   grid-gap: 2rem;
+   align-items: center;
+   text-align:center;
+   margin-top:5rem;
+   
+}
+
+.places-description {
+    text-align: center;
+    margin-top: 20px;
+}
+#destination .dest-header{ 
+   font-size: var(--h2-font);
+   line-height: 1.2;
+   text-align: center;
+} 
+.places-img{
+    position:relative;
+    transition:all .3s cubic-bezier(.445 , .05,.55,.95);
+    will-change: filter;
+    cursor: pointer;
+}
+.places-img img{
+    width:100%;
+    height: auto;
+}
+.places-img h3{
+    position:absolute;
+    font-size:30px;
+    font-weight: 600;
+    text-align:center;
+    top:2px;
+    right:40px;
+}
+.places-description .stars i{
+    color:var(--main-color);
+    font-size: (--p-font);
+}
+
+.places:hover{
+    filter:brightness(100%) hue-rotate(45deg);
+    transform: scale(1.04);
+    transition: ease-in-out .40s;
+}
+.package-description img{
+    width:100%;
+    height: 500px;
+    border-radius: 20px;
+    object-fit: cover;
+    filter:brightness(80%);
+    transition: all .3s cubic-bezier(.495,.05,.55,.95);
+    will-change: filter;
+}
+#package{
+    margin:150px 0px 50px 0px;
+}
+.package-container{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.package-place{
+    margin-top:5rem;
+    flex:1 1 400px;
+}
+.package-description h3{
+    position:absolute;
+    font-weight: 500;
+    top:350px;
+    left:20px;
+    font-size: var(--h2-font);
+    color: white;
+}
+.package-description {
+    position:relative;
+    padding-right: 20px;
+}
+.package-description p{
+    position:absolute;
+    top:420px;
+    left:20px;
+    color:white;
+}
+.package-place:hover{
+    filter:brightness(100%) hue-rotate(45deg);
+    transform: scale(1.04);
+    transition: ease-in-out .40s;
+    cursor: pointer;
+}
+.package-header{   
+    font-size: var(--h2-font);
+    line-height: 1.2;
+    text-align: center;
+} 
+
+@media(max-width: 1400px){
+    #nav{
+        padding:17px 3%;
+        transition: .3s;
+         
+    }
+    .boat-contents h2{
+        font-size: 2.3rem;
+    }
+    .boat-contents p{
+        font-size:1rem;
+    }
+    section{
+        padding: 80px 3%;
+        transition: .3s;
+    }
+    :root{  
+    --bg-font:4.5rem;
+    --h2-font:2.3rem;
+    --p-font:1rem;
+}
+}
+@media(max-width: 1040px){
+    #nav .nav-items{
+        display:none;
+    }
+
+}
+@media(max-width: 575px){
+    :root{  
+        --bg-font:3.8rem;
+        --h2-font:1.8rem;
+        --p-font:1rem;
+    } 
+    #icons .heading{
+        text-align: center;
+        margin-right: -20px;
+    }
+    .boat-contents{
+        text-align: center;
+    }
+    .icons-container{
+        text-align: center;
+        width:300px;
+    }
+    .vacations{
+        text-align: center;
+    }
+    .destination-container{
+        text-align: center;
+        margin-right:-10px;
+    }
+    .package-container {
+       margin-right:-25px;
+    }
+    
+}
